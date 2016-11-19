@@ -4,6 +4,10 @@
   "description": "Rebuilding my website using react redux and webpack",
   "main": "index.js",
   "scripts": {
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
