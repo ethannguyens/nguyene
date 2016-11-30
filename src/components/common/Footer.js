@@ -7,17 +7,11 @@ const Footer = () => {
     <div className="footer">
       <nav>
         <IndexLink to="/" activeClassName="active">Home</IndexLink>
-        {" | "}
         <Link to="/portfolio" activeClassName="active">Portfolio</Link>
-        {" | "}
         <Link to="/education" activeClassName="active">Education</Link>
-        {" | "}
         <Link to="/about" activeClassName="active">About</Link>
-        {" | "}
         <Link to="/blog" activeClassName="active">Blog</Link>
-        {" | "}
         <Link to="/resume" activeClassName="active">Resume</Link>
-        {" | "}
         <Link to="/contact" activeClassName="active">Contact</Link>
       </nav>
       <div className="footer_copyright">
@@ -26,9 +20,7 @@ const Footer = () => {
       <div className="footer_term">
         <nav className="footer_termNav">
           <Link to="/term" activeClassName="active">Terms of Service</Link>
-          {" | "}
           <Link to="/return" activeClassName="active">Return Policy</Link>
-          {" | "}
           <Link to="/policy" activeClassName="active">Privacy Policy</Link>
         </nav>
       </div>
