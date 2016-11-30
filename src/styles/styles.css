@@ -1,16 +1,49 @@
 /* Styles */
 #app {
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #4d4d4d;
-    min-width: 550px;
-    max-width: 850px;
-    margin: 0 auto;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  min-width: 550px;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 a.active {
-    color: orange;
+  color: orange;
 }
 
 nav {
-    padding-top: 20px;
+  padding-top: 20px;
+}
+
+/*Video widget*/
+* {
+  box-sizing: border-box;
+}
+
+.widgetVideo_videoContainer {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+  box-sizing: border-box;
+}
+
+.widgetVideo_video,
+.widgetVideo_videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .widgetVideo_video { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .widgetVideo_videod { width: 300%; left: -100%; }
 }
