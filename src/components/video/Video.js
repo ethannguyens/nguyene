@@ -14,10 +14,9 @@ const Video = () => {
       <div className="widgetVideoContent">
         <div className="widgetVideoContent_info">
           <p className="widgetVideoContent_info-highlight">I create a lot of problems and dare myself to solve it.</p>
-          <p className="widgetVideoContent_info-title">Beautiful and Powerful That's Perfection</p>
-          <button className="widgetVideoContent_info-button">
-            <a href="/perfection">Perfection Web</a>
-          </button>
+          <p className="widgetVideoContent_info-title">Beautiful and Powerful</p>
+          <p className="widgetVideoContent_info-title">That's Perfection</p>
+          <a className="button widgetVideoContent_info-button" href="/perfection">Perfection Web</a>
         </div>
       </div>
     </div>
