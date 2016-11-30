@@ -29,6 +29,7 @@ export default {
   ],
   module: {
     loaders: [
+      {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]},
       {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
       {test: /(\.css)$/, loader: ExtractTextPlugin.extract("css?sourceMap")},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
