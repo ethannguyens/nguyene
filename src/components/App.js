@@ -8,13 +8,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <Header
-          loading={this.props.loading}
-        />
+        {/*<Header*/}
+          {/*loading={this.props.loading}*/}
+        {/*/>*/}
         {this.props.children}
-        <Footer
-          loading={this.props.loading}
-        />
+        {/*<Footer*/}
+          {/*loading={this.props.loading}*/}
+        {/*/>*/}
       </div>
     );
   }
