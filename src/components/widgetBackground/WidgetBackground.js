@@ -9,7 +9,6 @@ class WidgetBackground extends React.Component {
   render(){
     return (
       <div className="widgetBackground">
-        <div className="widget">
           <div className="widgetBackground_container">
             {this.props.vimeoId ? <iframe
               src={`https://player.vimeo.com/video/${this.props.vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
@@ -21,7 +20,6 @@ class WidgetBackground extends React.Component {
 
             {this.props.image ? <img src={this.props.image}/> : undefined}
           </div>
-        </div>
         <div className="widgetBackgroundContent">
           {this.props.highlight ? <div className="widgetVideoContent_title">{this.props.highlight}</div> : undefined}
           {this.props.title ? <div className="widgetVideoContent_subtitle">{this.props.title}</div> : undefined}
@@ -43,7 +41,7 @@ WidgetBackground.propTypes = {
   subTitle: PropTypes.string,
   text: PropTypes.string,
   buttonText: PropTypes.string,
-  buttonLink: PropTypes.bool.isRequired
+  buttonLink: PropTypes.string
 };
 
 export default WidgetBackground;
