@@ -8,7 +8,8 @@ import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 import {loadCourses} from './actions/courseActions';
 import {loadAuthors} from './actions/authorActions';
-import './styles/styles.css'; //Webpack can import CSS files too!
+
+require('./styles/styles.scss');
 
 const store = configureStore();
 store.dispatch(loadCourses());
