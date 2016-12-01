@@ -9,7 +9,7 @@ import routes from './routes';
 import {loadCourses} from './actions/courseActions';
 import {loadAuthors} from './actions/authorActions';
 
-require('./styles/styles.scss');
+require('./styles/main.scss');
 
 const store = configureStore();
 store.dispatch(loadCourses());
