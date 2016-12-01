@@ -8,15 +8,15 @@ import {browserHistory} from 'react-router';
 class CoursesPage extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
+    this.eventHandler = this.eventHandler.bind(this);
   }
 
-  courseRow(course, index) {
-    return <div key={index}>{course.title}</div>;
+  componentDidMount() {
+
   }
 
-  redirectToAddCoursePage() {
-    browserHistory.push('/course');
+  eventHandler() {
+    
   }
 
   render() {
