@@ -10,8 +10,9 @@ class WidgetBackground extends React.Component {
 
   render(){
     let background;
-    if (this.mobileDevice) {
-      if (this.props.youtubeId) {
+    console.log(this.mobileDevice);
+    if (!this.mobileDevice) {
+      if (this.props.vimeoId) {
         background = <iframe
           src={`https://player.vimeo.com/video/${this.props.vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
           frameBorder="0" allowFullScreen="1"/>;
