@@ -1,7 +1,7 @@
 
 .widgetBackground {
   position: relative;
-  height: 650px;
+  height: 400px;
   max-width: 100%;
   overflow: hidden;
 }
@@ -19,16 +19,16 @@
   iframe {
     background-color: #000000;
     position: absolute;
-    top: -35%;
     left: 0;
     width: 100%;
-    height: 170%;
+    height: 100%;
     pointer-events: none;
   }
 }
 
 .widgetBackgroundContent {
   position: absolute;
+  padding: 10%;
   left: 0;
   right: 0;
   top: 50%;
@@ -40,42 +40,40 @@
 }
 
 .widgetBackgroundContent_highlight {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .widgetBackgroundContent_title {
-  padding: 0 30%;
+  padding: 0;
+  font-size: 36px;
   margin-bottom: 40px;
 }
 
-.widgetBackgroundContent_button {
-  margin-top: 20px;
-}
-
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 768px) {
   .widgetBackgroundContent_title {
     padding: 0;
     margin-bottom: 40px;
   }
   .widgetBackground_container iframe {
-    top: -12.5%;
-    height:125%;
+    top: -50%;
+    height: 200%;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 1024px) {
   .widgetBackground {
-    height: 400px;
+    height: 600px;
   }
 
   .widgetBackground_container iframe {
-    top: 0;
-    height:100%;
+    top: -50%;
+    height: 200%;
   }
 
   .widgetBackgroundContent_title {
-    padding: 0;
-    font-size: 36px;
+    padding: 0 30%;
+    font-size: 60px;
     margin-bottom: 40px;
   }
 }
+

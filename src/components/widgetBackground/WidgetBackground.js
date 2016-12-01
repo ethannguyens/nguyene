@@ -1,25 +1,31 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
+const utility = require('../../modules/utility');
 
 class WidgetBackground extends React.Component {
   constructor(props) {
     super(props);
+    this.mobileDevice = utility.mobileDevice();
   }
 
   render(){
+    let background;
+    if (this.mobileDevice) {
+      if (this.props.youtubeId) {
+        background = <iframe
+          src={`https://player.vimeo.com/video/${this.props.vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
+          frameBorder="0" allowFullScreen="1"/>;
+      } else {
+        background =  <iframe
+          src={`https://www.youtube.com/embed/${this.props.youtubeId}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=${this.props.youtubeId}`}
+          frameBorder="0" allowFullScreen="1"/>
+      }
+    } else {
+      background = <img src={this.props.image}/>;
+    }
     return (
       <div className={this.props.class ? `widgetBackground ${this.props.class}` : `widgetBackground`}>
-          <div className="widgetBackground_container">
-            {this.props.vimeoId ? <iframe
-              src={`https://player.vimeo.com/video/${this.props.vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
-              frameBorder="0" volume="0" allowFullScreen="1"/> : undefined}
-
-            {this.props.youtubeId ? <iframe
-              src={`https://www.youtube.com/embed/${this.props.youtubeId}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=${this.props.youtubeId}`}
-              frameBorder="0" volume="0" allowFullScreen="1"/> : undefined}
-
-            {this.props.image ? <img src={this.props.image}/> : undefined}
-          </div>
+          <div className="widgetBackground_container">{background}</div>
         <div className="widgetBackgroundContent">
           {this.props.highlight ? <div className="highlight widgetBackgroundContent_highlight">{this.props.highlight}</div> : undefined}
           {this.props.title ? <div className="title widgetBackgroundContent_title">{this.props.title}</div> : undefined}
