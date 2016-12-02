@@ -19,16 +19,17 @@
 
 //nav
 .header_nav {
-  display: none;
   width: 40%;
   position: absolute;
-  right: 0;
+  left:100%;
   background-color: #fff;
   color: #000;
   top: 70%;
-  text-align: right;
   z-index: 9999;
   text-align: center;
+
+  -moz-transition: left 0.5s ease, width 0s ease-out 1s, border-width 0s ease-out 1s;
+  -webkit-transition: left 0.5s ease, width 0s ease-out 1s, border-width 0s ease-out 1s;
 
   .header_navItem {
     padding: 10px 15px;
@@ -46,10 +47,19 @@
   }
 }
 
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
 
 //header active
 .header.active {
   .header_nav {
-    display: block;
+    left: 60%;
+    -moz-transition: left 0.5s ease 0.1s, width 0s ease-out 0.1s, border-width 0s ease-out 0.1s;
+    -webkit-transition: left 0.5s ease 0.1s, width 0s ease-out 0.1s, border-width 0s ease-out 0.1s;
   }
 }
