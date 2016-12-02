@@ -4,16 +4,20 @@
   width: 100%;
   font-family: 'Oxygen', sans-serif;
   text-transform: uppercase;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .logo {
-  margin: 10% 5%;
+  position: absolute;
+  margin: 30px 0 0 15px;
   float: left;
   color: #fff;
+  z-index: 999;
 }
 
 .header_menuIcon {
-  margin: 10% 5% 0 0;
+  margin: 30px 15px 0 0;
   float: right;
 }
 
@@ -24,27 +28,32 @@
   left:100%;
   background-color: #fff;
   color: #000;
-  top: 70%;
-  z-index: 9999;
+  top: 60px;
+  z-index: 999;
   text-align: center;
 
   -moz-transition: left 0.5s ease, width 0s ease-out 1s, border-width 0s ease-out 1s;
   -webkit-transition: left 0.5s ease, width 0s ease-out 1s, border-width 0s ease-out 1s;
+}
 
-  .header_navItem {
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: 900;
-    border-bottom: 2px solid  #000;
-  }
+.header_navItems {
+  background: #fff;
+  padding: 10px;
+}
 
-  .header_navItem:first-child {
-    border-top: 2px solid  #000;
-  }
+.header_navItem {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 900;
+  border-bottom: 2px solid  #000;
+}
 
-  .header_navItemLink {
-    color: #000;
-  }
+.header_navItem:first-child {
+  border-top: 2px solid  #000;
+}
+
+.header_navItemLink {
+  color: #000;
 }
 
 @-webkit-keyframes slide {
@@ -62,4 +71,67 @@
     -moz-transition: left 0.5s ease 0.1s, width 0s ease-out 0.1s, border-width 0s ease-out 0.1s;
     -webkit-transition: left 0.5s ease 0.1s, width 0s ease-out 0.1s, border-width 0s ease-out 0.1s;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 100px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header_menuIcon {
+    display: none;
+  }
+
+  .header_nav {
+    display: block;
+    left: unset;
+    top: 30px;
+    right: 15px;
+    width: unset;
+    background: transparent;
+  }
+
+  .header_navItems {
+    background: transparent;
+  }
+
+  .header_navItem {
+    display: inline-block;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+  }
+
+  .header_navItem:first-child {
+    border: none;
+  }
+
+  .header_navItem-contact {
+    border: 2px solid;
+  }
+
+  .header_navItem:hover {
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px #ffffff;
+  }
+
+  .header_navItem.active {
+    border-bottom: 2px solid;
+  }
+
+  .header_navItemLink {
+    color: #fff;
+  }
+
 }
