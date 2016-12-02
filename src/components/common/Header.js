@@ -36,7 +36,7 @@ class Header extends React.Component {
           <span></span>
         </div>
         <nav className="header_nav">
-          <ul className="header_navItem">
+          <ul className="header_navItems">
             {this.props.menu.map((item, i) => {
               return (
                 <li key={i} className={`header_navItem header_navItem-${item.id}`}>
