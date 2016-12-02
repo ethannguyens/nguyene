@@ -1,9 +1,8 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
 
-const js = require('../../modules/js');
-
-require('../../styles/MenuIcon.scss');
+require('./MenuIcon.scss');
+require('./Header.scss');
 
 class Header extends React.Component {
   constructor(props, context) {
