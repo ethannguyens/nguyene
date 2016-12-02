@@ -1,24 +1,32 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
 
+const js = require('../../modules/js');
+
+require('../../styles/MenuIcon.scss');
 
 class Header extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
+    this.eventHandler = this.eventHandler.bind(this);
   }
 
-  courseRow(course, index) {
-    return <div key={index}>{course.title}</div>;
+  componentDidMount() {
+    this.eventHandler();
   }
 
-  redirectToAddCoursePage() {
-    browserHistory.push('/course');
+  eventHandler() {
+    const menu = document.querySelector('.header_menuIcon');
+    const header = document.querySelector('.header');
+    if (menu) {
+      menu.addEventListener('click', () => {
+        if (header.classList.contains('active')) header.classList.remove('active');
+        else header.classList.add('active');
+      });
+    }
   }
 
   render() {
-    const {courses} = this.props;
-
     return (
       <div className="header">
         <div className="logo">E/N</div>
@@ -28,13 +36,15 @@ class Header extends React.Component {
           <span></span>
         </div>
         <nav className="header_nav">
-          <IndexLink className="header_navItem header_navItem-home" to="/" activeClassName="active">Home</IndexLink>
-          <Link className="header_navItem header_navItem-portfolio" to="/portfolio" activeClassName="active">Portfolio</Link>
-          <Link className="header_navItem header_navItem-education" to="/education" activeClassName="active">Education</Link>
-          <Link className="header_navItem header_navItem-about" to="/about" activeClassName="active">About</Link>
-          <Link className="header_navItem header_navItem-blog" to="/blog" activeClassName="active">Blog</Link>
-          <Link className="header_navItem header_navItem-resume" to="/resume" activeClassName="active">Resume</Link>
-          <Link className="header_navItem header_navItem-contact" to="/contact" activeClassName="active">Contact</Link>
+          <ul className="header_navItem">
+            {this.props.menu.map((item, i) => {
+              return (
+                <li key={i} className={`header_navItem header_navItem-${item.id}`}>
+                  <Link key={i} className={`header_navItemLink header_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+                </li>
+              );
+            })}
+          </ul>
         </nav>
       </div>
     );
@@ -42,7 +52,7 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  loading: PropTypes.bool.isRequired
+  menu: PropTypes.array.isRequired
 };
 
 export default Header;

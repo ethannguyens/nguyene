@@ -4,17 +4,16 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import {connect} from 'react-redux';
 
+const database = require('../database/database');
+
 class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
         <Header
-          loading={this.props.loading}
+          menu={database.menu}
         />
         {this.props.children}
-{/*        <Footer
-          loading={this.props.loading}
-        />*/}
       </div>
     );
   }
