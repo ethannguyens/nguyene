@@ -1,4 +1,55 @@
 .header {
   position: absolute;
   top: 0;
+  width: 100%;
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+}
+
+.logo {
+  margin: 10% 5%;
+  float: left;
+  color: #fff;
+}
+
+.header_menuIcon {
+  margin: 10% 5% 0 0;
+  float: right;
+}
+
+//nav
+.header_nav {
+  display: none;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  color: #000;
+  top: 70%;
+  text-align: right;
+  z-index: 9999;
+  text-align: center;
+
+  .header_navItem {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 900;
+    border-bottom: 2px solid  #000;
+  }
+
+  .header_navItem:first-child {
+    border-top: 2px solid  #000;
+  }
+
+  .header_navItemLink {
+    color: #000;
+  }
+}
+
+
+//header active
+.header.active {
+  .header_nav {
+    display: block;
+  }
 }
