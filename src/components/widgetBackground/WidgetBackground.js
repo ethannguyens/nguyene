@@ -16,7 +16,7 @@ class WidgetBackground extends React.Component {
         background = <iframe
           src={`https://player.vimeo.com/video/${this.props.vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
           frameBorder="0" allowFullScreen="1"/>;
-      } else {
+      } else if (this.props.youtubeId){
         background =  <iframe
           src={`https://www.youtube.com/embed/${this.props.youtubeId}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=${this.props.youtubeId}`}
           frameBorder="0" allowFullScreen="1"/>
