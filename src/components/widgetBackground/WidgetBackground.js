@@ -1,24 +1,25 @@
 import React, {PropTypes} from 'react';
-import {Link, IndexLink} from 'react-router';
-const utility = require('../../modules/utility');
+import {mobileDevice} from '../../modules/utility';
+
+require('./WidgetBackground.scss');
 
 class WidgetBackground extends React.Component {
   constructor(props) {
     super(props);
-    this.mobileDevice = utility.mobileDevice();
+    this.mobileDevice = mobileDevice();
     this.background = this.background.bind(this);
   }
 
   media(youtubeId, vimeoId, image) {
     let media;
     if (vimeoId) {
-      media = <iframe
+      media = (<iframe
         src={`https://player.vimeo.com/video/${vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
-        frameBorder="0" allowFullScreen="1"/>;
+        frameBorder="0" allowFullScreen="1"/>);
     } else if (youtubeId) {
-      media =  <iframe
+      media =  (<iframe
         src={`https://www.youtube.com/embed/${youtubeId}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=${youtubeId}`}
-        frameBorder="0" allowFullScreen="1"/>
+        frameBorder="0" allowFullScreen="1"/>);
     } else if (image) {
       media = <img src={image}/>;
     }
@@ -29,13 +30,13 @@ class WidgetBackground extends React.Component {
     let background;
     if (!this.mobileDevice) {
       if (vimeoId) {
-        background = <iframe
+        background = (<iframe
           src={`https://player.vimeo.com/video/${vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
-          frameBorder="0" allowFullScreen="1"/>;
+          frameBorder="0" allowFullScreen="1"/>);
       } else if (this.props.youtubeId){
-        background =  <iframe
+        background =  (<iframe
           src={`https://www.youtube.com/embed/${youtubeId}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=${youtubeId}`}
-          frameBorder="0" allowFullScreen="1"/>
+          frameBorder="0" allowFullScreen="1"/>);
       }
     } else {
       background = <img src={image}/>;
