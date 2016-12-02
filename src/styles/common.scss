@@ -1,10 +1,13 @@
 //Common
+
+* {
+
+}
 body {
   margin: 0;
 }
 
 .homeBody {
-  background-color: #000;
   padding: 0;
   margin: 0;
 }
@@ -63,6 +66,18 @@ ul {
   .title {
     font-size: 60px;
   }
+}
+
+//Text
+
+
+.text {
+  font-size: 16px;
+  font-family: 'Oxygen', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 //Button
