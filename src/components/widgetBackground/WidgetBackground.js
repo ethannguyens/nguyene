@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {mobileDevice} from '../../modules/utility';
 
+require('./WidgetBackground.scss');
 
 class WidgetBackground extends React.Component {
   constructor(props) {
@@ -48,12 +49,12 @@ class WidgetBackground extends React.Component {
       <div className={this.props.class ? `widgetBackground ${this.props.class}` : `widgetBackground`}>
           <div className="widgetBackground_background">{this.background(this.props.youtubeId, this.props.vimeoId, this.props.image)}</div>
         <div className="widgetBackgroundContent">
-          {this.props.highlight ? <div className="highlight widgetBackgroundContent_highlight">{this.props.highlight}</div> : undefined}
-          {this.props.title ? <div className="title widgetBackgroundContent_title">{this.props.title}</div> : undefined}
-          {this.props.subtitle ? <div className="subtitle widgetBackgroundContent_subtitle">{this.props.subtitle}</div> : undefined}
-          {this.props.text ? <div className="text widgetBackgroundContent_text">T{this.props.text} </div> : undefined}
-          {this.media(this.props.mediaYoutubeId, this.props.mediaVimeoId, this.mediaImage)}
-          {this.props.buttonText? <a className="button widgetBackgroundContent_button" href={this.props.buttonLink}>{this.props.buttonText}</a> : undefined}
+          {this.props.highlight ? <div className="widgetBackgroundContent_highlight">{this.props.highlight}</div> : undefined}
+          {this.props.title ? <div className="widgetBackgroundContent_title">{this.props.title}</div> : undefined}
+          {this.props.subtitle ? <div className="widgetBackgroundContent_subtitle">{this.props.subtitle}</div> : undefined}
+          {this.props.text ? <div className="widgetBackgroundContent_text">T{this.props.text} </div> : undefined}
+          {this.media(this.props.mediaYoutubeId, this.props.mediaVimeoId, this.props.mediaImage)}
+          {this.props.buttonText? <a className="widgetBackgroundContent_button" href={this.props.buttonLink}>{this.props.buttonText}</a> : undefined}
         </div>
       </div>
     );
