@@ -1,8 +1,10 @@
 @import '../modules/variables';
 @import '../partials/core';
 
+//mainVideo
 .widgetBackground-mainVideo {
   @include tint(rgba(0,0,0,0.5));
+  height: 400px;
 
   .widgetBackgroundContent_highlight {
   }
@@ -15,3 +17,11 @@
     @extend .button-main;
   }
 }
+
+@media (min-width: $media-md) {
+  .widgetBackground-mainVideo {
+    height: 600px;
+  }
+}
+
+//intro
