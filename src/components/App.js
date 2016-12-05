@@ -6,12 +6,10 @@ import {connect} from 'react-redux';
 
 const database = require('../database/database');
 
-require('../styles/grid.scss');
-
 class App extends React.Component {
   render() {
     return (
-      <div className="Grid">
+      <div className="">
         <Header className="Grid-cell"
           menu={database.menu}
         />

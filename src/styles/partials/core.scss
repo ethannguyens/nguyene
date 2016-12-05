@@ -1,0 +1,65 @@
+@import '../modules/variables';
+//Headings
+
+//Highlight
+.highlight {
+  font-family: $main-serif;
+  font-size: 18px;
+  font-size: 4vw;
+  color: $brand-main;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
+}
+
+//Title
+.title {
+  font-size: 30px;
+  font-size: 7vw;
+  color: $brand-main;
+  -webkit-font-smoothing: antialiased;
+}
+
+.title-sans {
+  @extend .title;
+  font-family: $main-sans;
+  font-weight: 900;
+}
+
+.title-serif {
+  @extend .title;
+  font-family: $main-serif;
+  font-weight: 100;
+}
+
+//Text
+.text {
+  font-family: $main-sans;
+  font-size: 16px;
+  font-size: 3.5vw;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  color: $brand-grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+//Button
+.button {
+  font-family: $main-sans;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 4vw;
+  padding: 1vw;
+  border: 2px solid;
+}
+
+.button-main {
+  @extend .button;
+  color: $brand-main;
+}
+
+.button-sub {
+  @extend .button;
+  color: $brand-sub;
+}

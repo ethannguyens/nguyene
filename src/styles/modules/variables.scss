@@ -1,0 +1,27 @@
+//Core StyleGuide
+
+//Font
+$main-serif: 'EB Garamond', serif;
+$main-sans: 'Oxygen', sans-serif;
+$main-mono: 'Oxygen Mono', monospace;
+
+//Color
+$brand-main: #fff;
+$brand-sub: #000;
+$brand-grey: #5c5c5c;
+$button-black: #272727;
+
+//Screen break point
+$media-sm: 320px;
+$media-md: 768px;
+$media-lg: 1024px;
+
+//Display Flex
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
