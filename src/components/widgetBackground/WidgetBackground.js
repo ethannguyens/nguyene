@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 import {mobileDevice} from '../../modules/utility';
 
-require('./WidgetBackground.scss');
 
 class WidgetBackground extends React.Component {
   constructor(props) {
