@@ -1,7 +1,8 @@
+@import '../../styles/modules/variables';
 
 .widgetBackground {
   position: relative;
-  height: 400px;
+  height: $widget-height-xl;
   max-width: 100%;
   overflow: hidden;
 }
@@ -24,68 +25,29 @@
   }
 }
 
-.widgetBackground_media {
-  margin-bottom: 50px;
-}
-
 .widgetBackgroundContent {
   position: absolute;
-  padding: 5%;
   left: 0;
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin: auto;
-  max-width: 100%;
   text-align: center;
-}
-
-.widgetBackgroundContent_highlight {
-  margin-bottom: 10px;
-}
-
-.widgetBackgroundContent_title {
-  padding: 0;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-//Text
-.widgetBackgroundContent_text {
-  margin-bottom: 40px;
-
+  flex-flow: column wrap;
 }
 
 @media screen and (min-width: 768px) {
-  .widgetBackgroundContent_title {
-    padding: 0;
-    margin-bottom: 40px;
-  }
   .widgetBackground_background iframe {
     top: -50%;
     height: 200%;
   }
+
+
 }
 
 @media screen and (min-width: 1024px) {
-  .widgetBackground {
-    height: 700px;
-  }
-
-  .widgetBackgroundContent {
-    max-width: 1024px;
-  }
-
   .widgetBackground_background iframe {
     top: -50%;
     height: 200%;
   }
-
-  .widgetBackgroundContent_title {
-    padding: 0 20%;
-    font-size: 60px;
-    margin-bottom: 40px;
-  }
 }
-

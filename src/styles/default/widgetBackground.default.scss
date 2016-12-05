@@ -1,0 +1,35 @@
+@import '../modules/variables';
+@import '../partials/core';
+
+.widgetBackground {
+  .widgetBackgroundContent_highlight {
+    @extend .highlight;
+    font-size: $font-m;
+    margin-bottom: 1em;
+  }
+
+  .widgetBackgroundContent_title {
+    @extend .title-sans;
+    font-size: $font-xl;
+    margin-bottom: 1em;
+  }
+  .widgetBackgroundContent_button {
+    @extend .button;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .widgetBackgroundContent_highlight {
+    font-size: $font-l;
+  }
+
+  .widgetBackgroundContent_title {
+    font-size: $font-xl;
+  }
+
+  .widgetBackgroundContent_button {
+    font-size: $font-l;
+  }
+}
+

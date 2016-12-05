@@ -1,0 +1,17 @@
+@import '../modules/variables';
+@import '../partials/core';
+
+.widgetBackground-mainVideo {
+  @include tint(rgba(0,0,0,0.5));
+
+  .widgetBackgroundContent_highlight {
+  }
+
+  .widgetBackgroundContent_title {
+    text-transform: uppercase;
+  }
+
+  .widgetBackgroundContent_button {
+    @extend .button-main;
+  }
+}

@@ -1,9 +1,24 @@
 //Core StyleGuide
 
+//Screen break point
+$media-sm: 320px;
+$media-md: 768px;
+$media-lg: 1024px;
+
 //Font
 $main-serif: 'EB Garamond', serif;
 $main-sans: 'Oxygen', sans-serif;
 $main-mono: 'Oxygen Mono', monospace;
+
+//Font Size
+$font-xxs: 10px;
+$font-xs: 14px;
+$font-s: 20px;
+$font-m: 24px;
+$font-l: 32px;
+$font-xl: 44px;
+$font-xxl: 64px;
+
 
 //Color
 $brand-main: #fff;
@@ -11,10 +26,12 @@ $brand-sub: #000;
 $brand-grey: #5c5c5c;
 $button-black: #272727;
 
-//Screen break point
-$media-sm: 320px;
-$media-md: 768px;
-$media-lg: 1024px;
+//Widget Height
+$widget-height-s: 300px;
+$widget-height-m: 400px;
+$widget-height-l: 500px;
+$widget-height-xl: 600px;
+
 
 //Display Flex
 @mixin display-flex() {
