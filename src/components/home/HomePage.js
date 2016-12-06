@@ -18,6 +18,13 @@ class HomePage extends React.Component {
                           title="Harrisburg Web Design & Squarespace Development"
                           text="Being that I only work with a select amount of clients at once, I’m able to provide agency service, without the agency price.  I enjoy working with local businesses within the Harrisburg area, as well as some of my previous tech startups stretching as far as Spain to London. Whether you're looking to improve your current website or completely start fresh, it's worth a quick conversation to see what I could offer you."
         />
+        <WidgetBackground class="widgetBackground-passion"
+                          title="Understanding my passion"
+                          text="There's something to be said about working with passionate business owners that truly love what they do. I’m no different. I started my business because I honestly enjoy coming to work every day to create something beautiful that has the ability to impact others."
+                          mediaVimeoId="156296154"
+                          buttonText="More About Me"
+                          buttonLink="#"
+        />
       </div>
     );
   }

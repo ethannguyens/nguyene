@@ -20,8 +20,35 @@
 
 @media (min-width: $media-md) {
   .widgetBackground-mainVideo {
-    height: 600px;
+    height: $widget-height-xl;
   }
 }
 
 //intro
+.widgetBackground-intro {
+    @include tint($brand-grey-sub);
+
+  .widgetBackgroundContent_title {
+    margin-bottom: 0.5em;
+    font-family: $main-serif;
+    color: $brand-black;
+    font-weight: 100;
+  }
+}
+
+//passion
+.widgetBackground-passion {
+  @extend .widgetBackground-intro;
+  @include tint($brand-main);
+
+  height: $widget-height-xl;
+
+  .widgetBackgroundContent_media {
+    margin-bottom: 30px;
+  }
+
+  .widgetBackgroundContent_button {
+    @extend .button-sub;
+  }
+}
+

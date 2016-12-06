@@ -23,7 +23,7 @@ class WidgetBackground extends React.Component {
     } else if (image) {
       media = <img src={image}/>;
     }
-    return <div className="widgetBackground_media">{media}</div>;
+    return <div className="widgetBackgroundContent_media">{media}</div>;
   }
 
   background(youtubeId, vimeoId, image) {
