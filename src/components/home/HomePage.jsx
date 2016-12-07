@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import WidgetBackground from '../widgetBackground/WidgetBackground';
+import Instagram from '../instagram/Instagram';
 
 class HomePage extends React.Component {
   render() {
@@ -24,6 +25,11 @@ class HomePage extends React.Component {
                           mediaVimeoId="156296154"
                           buttonText="More About Me"
                           buttonLink="#"
+        />
+        <instagram class="myInstagram"
+                   title="A look into my life"
+                   buttonText="Learn more about me"
+                   buttonLink="#"
         />
       </div>
     );
