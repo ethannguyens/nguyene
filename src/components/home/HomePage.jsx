@@ -1,9 +1,31 @@
 import React from 'react';
 import {Link} from 'react-router';
 import WidgetBackground from '../widgetBackground/WidgetBackground';
+import SetOrion from '../setOrion/SetOrion';
 import Instagram from '../instagram/Instagram';
 
 class HomePage extends React.Component {
+  constructor(){
+    super();
+    this.widget1 = (<WidgetBackground class="widgetBackground-passion"
+                                      title="Understanding my passion"
+                                      text="There's something to be said about working with passionate business owners that truly love what they do. I’m no different. I started my business because I honestly enjoy coming to work every day to create something beautiful that has the ability to impact others."
+                                      mediaVimeoId="156296154"
+                                      buttonText="More About Me"
+                                      buttonLink="#"
+
+      />
+    );
+    this.widget2 = (<WidgetBackground class="widgetBackground-passion"
+                                      title="Understanding my passion"
+                                      text="There's something to be said about working with passionate business owners that truly love what they do. I’m no different. I started my business because I honestly enjoy coming to work every day to create something beautiful that has the ability to impact others."
+                                      mediaVimeoId="156296154"
+                                      buttonText="More About Me"
+                                      buttonLink="#"
+
+      />
+    );
+  }
   render() {
     return (
       <div className="homeBody">
@@ -26,10 +48,8 @@ class HomePage extends React.Component {
                           buttonText="More About Me"
                           buttonLink="#"
         />
-        <instagram class="myInstagram"
-                   title="A look into my life"
-                   buttonText="Learn more about me"
-                   buttonLink="#"
+        <SetOrion class="setOrion-myProject"
+                  widgets={[this.widget1, this.widget2]}
         />
       </div>
     );

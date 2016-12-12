@@ -8,11 +8,6 @@ import {browserHistory} from 'react-router';
 class CoursesPage extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.eventHandler = this.eventHandler.bind(this);
-  }
-
-  componentDidMount() {
-
   }
 
   eventHandler() {
