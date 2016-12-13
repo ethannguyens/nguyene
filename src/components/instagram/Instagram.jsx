@@ -1,28 +1,24 @@
 import React, {PropTypes} from 'react';
-import Profile from '../../database/profile'
-
+import Profile from '../../database/profile';
+import Instagram from 'node-instagram';
 // require('./instagram.scss');
 
 class instagram extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(Profile.instagram.clientId);
-    //this.intagram = this.createInstagram(Profile.instagram.clientId, Profile.instagram.clientSecret);
-    //this.getInstagramRecent = this.getInstagramRecent().bind(this);
-  }
-
-  /*createInstagram(clientId, clientSecret) {
-    return new Instagram({
-      clientId: clientId,
-      accessToken: clientSecret
-    })
-  }*/
-
-  /*getInstagramRecent() {
-    this.intagram.get('users/self/media/recent').then((data) => {
+  constructor() {
+    super();
+    this.ig = this.createInstagram(Profile.instagram.clientId, Profile.instagram.accessToken);
+    this.ig.get('users/self/media/recent').then((data) => {
+      console.log('here');
       console.log(data);
     });
-  }*/
+  }
+
+  createInstagram(clientId, accessToken) {
+    return new Instagram({
+      clientId: clientId,
+      accessToken: accessToken
+    })
+  }
 
   render(){
     return (
