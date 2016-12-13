@@ -48,9 +48,7 @@ class HomePage extends React.Component {
                           buttonText="More About Me"
                           buttonLink="#"
         />
-        <SetOrion class="setOrion-myProject"
-                  widgets={[this.widget1, this.widget2]}
-        />
+        <Instagram />
       </div>
     );
   }

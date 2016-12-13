@@ -6,7 +6,7 @@ export default {
   devtool: 'cheap-module-eval-source-map',
   noInfo: false,
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.json']
   },
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
@@ -30,6 +30,7 @@ export default {
     loaders: [
       {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]},
       {test: /\.jsx?$/, include: path.resolve(__dirname, 'src'), loaders: ['babel']},
+      {test: /\.json$/, loaders: ["json-loader"] },
       {test: /(\.css)$/, loaders: ['style', 'css']},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
       {test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000"},
