@@ -1,23 +1,10 @@
 import React, {PropTypes} from 'react';
-import Profile from '../../database/profile';
-const ig = require('instagram-node').instagram();
-
-// require('./instagram.scss');
+import Instagram from '../../service/instagram';
 
 class instagram extends React.Component {
   constructor() {
     super();
-    ig.use({ access_token: Profile.instagram.accessToken });
-    ig.use({ client_id: Profile.instagram.clientId,
-      client_secret: Profile.instagram.clientSecret });
-    ig.user_media_recent('user_id',(err, medias, pagination, remaining, limit) => {
-      console.log(err);
-      console.log(medias);
-      console.log(pagination);
-      console.log(remaining);
-      console.log(limit);
-    });
-
+    console.log(Instagram.getRecent());
   }
 
   render(){
@@ -27,7 +14,7 @@ class instagram extends React.Component {
           {this.props.highlight ? <div className="instagram_highlight">{this.props.highlight}</div> : undefined}
           {this.props.title ? <div className="instagram_title">{this.props.title}</div> : undefined}
           {this.props.subtitle ? <div className="instagram_subtitle">{this.props.subtitle}</div> : undefined}
-          {this.props.text ? <div className="instagram_text">T{this.props.text} </div> : undefined}
+          {this.props.text ? <div className="instagram_text">{this.props.text} </div> : undefined}
           {this.props.buttonText? <a className="instagram_button" href={this.props.buttonLink}>{this.props.buttonText}</a> : undefined}
         </div>
       </div>
