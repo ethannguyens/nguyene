@@ -10,10 +10,6 @@ class CoursesPage extends React.Component {
     super(props, context);
   }
 
-  eventHandler() {
-    
-  }
-
   render() {
     const {courses} = this.props;
 
