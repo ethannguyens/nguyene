@@ -9,6 +9,7 @@ const GLOBALS = {
 export default {
   debug: true,
   devtool: 'source-map',
+  headers: { "Access-Control-Allow-Origin": "http://localhost:3000", "Access-Control-Allow-Credentials": "true" },
   noInfo: false,
   entry: './src/index',
   target: 'web',
@@ -21,7 +22,8 @@ export default {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    headers: { "Access-Control-Allow-Origin": "http://localhost:3000", "Access-Control-Allow-Credentials": "true" },
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
