@@ -1,10 +1,16 @@
 import React, {PropTypes} from 'react';
-import Instagram from '../../service/instagram';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as instagramActions from '../../actions/instagramActions';
+import toastr from 'toastr';
 
-class instagram extends React.Component {
-  constructor() {
-    super();
-    console.log(Instagram.getRecent());
+export class Instagram extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+      course: Object.assign({}, props.instagram)
+    };
   }
 
   render(){
@@ -32,4 +38,16 @@ instagram.propTypes = {
   buttonLink: PropTypes.string
 };
 
-export default instagram;
+function mapStateToProps(state, ownProps) {
+  return {
+    instagram: state.instagram
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(instagramActions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Instagram);
