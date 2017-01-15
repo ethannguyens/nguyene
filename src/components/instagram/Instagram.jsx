@@ -28,7 +28,7 @@ export class Instagram extends React.Component {
   }
 }
 
-instagram.propTypes = {
+Instagram.propTypes = {
   class: PropTypes.string,
   highlight: PropTypes.string,
   title: PropTypes.string,
