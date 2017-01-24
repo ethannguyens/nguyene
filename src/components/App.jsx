@@ -8,6 +8,7 @@ const database = require('../database/database');
 
 class App extends React.Component {
   constructor() {
+    super();
     this.menu = [{
       id: 'home',
       link: '/home',
@@ -18,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="">
-        <Header menu=`${this.menu}`/>
+        <Header menu={this.menu}/>
         {this.props.children}
       </div>
     );
