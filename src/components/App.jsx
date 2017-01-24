@@ -2,6 +2,7 @@
 import React, {PropTypes} from 'react';
 import Header from './header/Header';
 import Footer from './footer/Footer';
+import {menu} from '../database/database';
 import {connect} from 'react-redux';
 
 const database = require('../database/database');
@@ -9,16 +10,12 @@ const database = require('../database/database');
 class App extends React.Component {
   constructor() {
     super();
-    this.menu = [{
-      id: 'home',
-      link: '/home',
-      text: 'Home'
-    }];
+    this.menu = menu;
   }
 
   render() {
     return (
-      <div className="">
+      <div className="nguyene">
         <Header menu={this.menu}/>
         {this.props.children}
       </div>
