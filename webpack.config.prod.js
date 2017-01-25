@@ -23,7 +23,7 @@ export default {
   },
   devServer: {
     contentBase: './dist',
-    headers: { "Access-Control-Allow-Origin": "http://localhost:3000", "Access-Control-Allow-Credentials": "true" },
+    headers: { "Access-Control-Allow-Origin": "http://localhost:3000", "Access-Control-Allow-Credentials": "true" }
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
