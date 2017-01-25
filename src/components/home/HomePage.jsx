@@ -39,7 +39,7 @@ class HomePage extends React.Component {
         />
         <WidgetBackground class="widgetBackground-intro"
                           title="Ethan Nguyen"
-                          text="Being that I only work with a select amount of clients at once, I’m able to provide agency service, without the agency price.  I enjoy working with local businesses within the Harrisburg area, as well as some of my previous tech startups stretching as far as Spain to London. Whether you're looking to improve your current website or completely start fresh, it's worth a quick conversation to see what I could offer you."
+                          text="Graduating from the University of Bristol with a MSc in Advanced Computing, I currently working as a Software Developer at one of the UK biggest e-commerce group. I enjoy working with JavaScript both front-end and back-end. I’d like to adapt latest technologies, tools and frameworks such as React, Redux, ES.Next and WebPack to build the prefect web. With my strong academic background and years of experience, I am no doubt that you will be benefit hugely from having me as part of your up coming projects."
         />
         <WidgetBackground class="widgetBackground-passion"
                           title="Understanding my passion"

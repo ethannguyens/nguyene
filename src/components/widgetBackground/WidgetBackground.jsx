@@ -52,7 +52,7 @@ class WidgetBackground extends React.Component {
           {this.props.highlight ? <div className="widgetBackgroundContent_highlight">{this.props.highlight}</div> : undefined}
           {this.props.title ? <div className="widgetBackgroundContent_title">{this.props.title}</div> : undefined}
           {this.props.subtitle ? <div className="widgetBackgroundContent_subtitle">{this.props.subtitle}</div> : undefined}
-          {this.props.text ? <div className="widgetBackgroundContent_text">T{this.props.text} </div> : undefined}
+          {this.props.text ? <div className="widgetBackgroundContent_text">{this.props.text} </div> : undefined}
           {this.media(this.props.mediaYoutubeId, this.props.mediaVimeoId, this.props.mediaImage)}
           {this.props.buttonText? <a className="widgetBackgroundContent_button" href={this.props.buttonLink}>{this.props.buttonText}</a> : undefined}
         </div>
