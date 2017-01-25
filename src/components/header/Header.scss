@@ -51,6 +51,7 @@
 }
 
 .header_navItemLink {
+  -webkit-font-smoothing: antialiased;
   color: $brand-black;
 }
 
@@ -71,9 +72,51 @@
 }
 
 @media (min-width: $media-md) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    opacity: 0.8;
+    color: $brand-main;
+  }
+
+  .logo:hover {
+    opacity: 1;
+  }
+
+  .header_nav {
+    left: unset;
+    width: unset;
+    top: 5%;
+    right: 5%;
+    color: $brand-main;
+    background: none;
+  }
+
+  .header_navItems {
+    background: none;
+  }
+
+  .header_navItem {
+    border: none;
+  }
+
+  .header_navItemLink {
+    opacity: 0.8;
+    color: $brand-main;
+
+  }
+
+  .header_navItemLink:hover {
+    opacity: 1;
+  }
+
   .header_menuIcon {
     display: none;
   }
+
   .header_navItems {
     -webkit-flex-flow: row wrap;
     justify-content: flex-end;
