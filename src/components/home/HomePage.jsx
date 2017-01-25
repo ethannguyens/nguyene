@@ -42,8 +42,8 @@ class HomePage extends React.Component {
                           text="Graduating from the University of Bristol with a MSc in Advanced Computing, I currently working as a Software Developer at one of the UK biggest e-commerce group. I enjoy working with JavaScript both front-end and back-end. I’d like to adapt latest technologies, tools and frameworks such as React, Redux, ES.Next and WebPack to build the prefect web. With my strong academic background and years of experience, I am no doubt that you will be benefit hugely from having me as part of your up coming projects."
         />
         <WidgetBackground class="widgetBackground-passion"
-                          title="Understanding my passion"
-                          text="There's something to be said about working with passionate business owners that truly love what they do. I’m no different. I started my business because I honestly enjoy coming to work every day to create something beautiful that has the ability to impact others."
+                          title="I'm a perfectionist"
+                          text="I truly love coding and refactoring. I can spend days to refactoring my code over and over again until it reaches its perfect state. Honestly, that inspire me going to work everyday – to perfect things."
                           mediaVimeoId="156296154"
                           buttonText="More About Me"
                           buttonLink="#"
