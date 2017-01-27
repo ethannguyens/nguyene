@@ -25,6 +25,7 @@ class Footer extends React.Component {
   render() {
     return (
     <div className="footer">
+
       <nav className="footer_nav-menu">
         <ul className="Grid footer_navItems">
           {this.props.footer.map((item, i) => {
@@ -36,6 +37,12 @@ class Footer extends React.Component {
           })}
         </ul>
       </nav>
+
+      {this.props.highlight ? <div className="footer_highlight">{this.props.highlight}</div> : undefined}
+      {this.props.title ? <div className="footer_title">{this.props.title}</div> : undefined}
+      {this.props.subtitle ? <div className="footer_subtitle">{this.props.subtitle}</div> : undefined}
+      {this.props.text ? <div className="footer_text">{this.props.text} </div> : undefined}
+
       <nav className="footer_nav-term">
         <ul className="Grid footer_navItems">
           {this.props.term.map((item, i) => {
@@ -47,6 +54,7 @@ class Footer extends React.Component {
           })}
         </ul>
       </nav>
+
       <nav className="footer_nav-social">
         <ul className="Grid footer_navItems">
           {this.props.social.map((item, i) => {
@@ -63,9 +71,13 @@ class Footer extends React.Component {
 }
 
 Footer.propTypes = {
-  footer: PropTypes.array.isRequired,
-  term: PropTypes.array.isRequired,
-  social: PropTypes.array.isRequired,
+  footer: PropTypes.array,
+  term: PropTypes.array,
+  social: PropTypes.array,
+  highlight: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Footer;
