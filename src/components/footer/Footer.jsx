@@ -1,35 +1,49 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
-import LoadingDots from '../common/LoadingDots';
 
-const Footer = () => {
-  return (
+class Footer extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+    this.eventHandler = this.eventHandler.bind(this);
+  }
+
+  componentDidMount() {
+    this.eventHandler();
+  }
+
+  eventHandler() {
+    const menu = document.querySelector('.header_menuIcon');
+    const header = document.querySelector('.header');
+    if (menu) {
+      menu.addEventListener('click', () => {
+        if (header.classList.contains('active')) header.classList.remove('active');
+        else header.classList.add('active');
+      });
+    }
+  }
+
+  render() {
+    return (
     <div className="footer">
-      <nav>
-        <IndexLink to="/" activeClassName="active">Home</IndexLink>
-        <Link to="/portfolio" activeClassName="active">Portfolio</Link>
-        <Link to="/education" activeClassName="active">Education</Link>
-        <Link to="/about" activeClassName="active">About</Link>
-        <Link to="/blog" activeClassName="active">Blog</Link>
-        <Link to="/resume" activeClassName="active">Resume</Link>
-        <Link to="/contact" activeClassName="active">Contact</Link>
+      <nav className="footer_nav">
+        <ul className="Grid header_navItems">
+          {this.props.footer.map((item, i) => {
+            return (
+              <li key={i} className={`header_navItem header_navItem-${item.id}`}>
+                <Link key={i} className={`header_navItemLink header_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
-      <div className="footer_copyright">
-        <p className="footer_coppyrightText">© 2016 Ethan Nguyen. All rights reserved. Ethan Nguyen Web App and Design</p>
-      </div>
-      <div className="footer_term">
-        <nav className="footer_termNav">
-          <Link to="/term" activeClassName="active">Terms of Service</Link>
-          <Link to="/return" activeClassName="active">Return Policy</Link>
-          <Link to="/policy" activeClassName="active">Privacy Policy</Link>
-        </nav>
-      </div>
     </div>
-  );
-};
+  )};
+}
 
 Footer.propTypes = {
-  loading: PropTypes.bool.isRequired
+  footer: PropTypes.array.isRequired,
+  term: PropTypes.array.isRequired,
+  social: PropTypes.array.isRequired,
 };
 
 export default Footer;
