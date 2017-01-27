@@ -12,12 +12,12 @@ class Footer extends React.Component {
   }
 
   eventHandler() {
-    const menu = document.querySelector('.header_menuIcon');
-    const header = document.querySelector('.header');
+    const menu = document.querySelector('.footer_menuIcon');
+    const footer = document.querySelector('.footer');
     if (menu) {
       menu.addEventListener('click', () => {
-        if (header.classList.contains('active')) header.classList.remove('active');
-        else header.classList.add('active');
+        if (footer.classList.contains('active')) footer.classList.remove('active');
+        else footer.classList.add('active');
       });
     }
   }
@@ -25,12 +25,34 @@ class Footer extends React.Component {
   render() {
     return (
     <div className="footer">
-      <nav className="footer_nav">
-        <ul className="Grid header_navItems">
+      <nav className="footer_nav-menu">
+        <ul className="Grid footer_navItems">
           {this.props.footer.map((item, i) => {
             return (
-              <li key={i} className={`header_navItem header_navItem-${item.id}`}>
-                <Link key={i} className={`header_navItemLink header_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+              <li key={i} className={`footer_navItem footer_navItem-${item.id}`}>
+                <Link key={i} className={`footer_navItemLink footer_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+      <nav className="footer_nav-term">
+        <ul className="Grid footer_navItems">
+          {this.props.term.map((item, i) => {
+            return (
+              <li key={i} className={`footer_navItem footer_navItem-${item.id}`}>
+                <Link key={i} className={`footer_navItemLink footer_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+      <nav className="footer_nav-social">
+        <ul className="Grid footer_navItems">
+          {this.props.social.map((item, i) => {
+            return (
+              <li key={i} className={`footer_navItem footer_navItem-${item.id}`}>
+                <Link key={i} className={`footer_navItemLink footer_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
               </li>
             );
           })}
