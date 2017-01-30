@@ -2,15 +2,16 @@
 import React, {PropTypes} from 'react';
 import Header from './header/Header';
 import Footer from './footer/Footer';
-import {menu} from '../database/database';
+import {menu, footer, term, social} from '../database/database';
 import {connect} from 'react-redux';
-
-const database = require('../database/database');
 
 class App extends React.Component {
   constructor() {
     super();
     this.menu = menu;
+    this.footer = footer;
+    this.term = term;
+    this.social = social;
   }
 
   render() {
@@ -18,6 +19,12 @@ class App extends React.Component {
       <div className="nguyene">
         <Header menu={this.menu}/>
         {this.props.children}
+        <Footer footer={this.footer}
+                title="Want to get to know me better, Email me at "
+                text="2017 Ethan Nguyen. All rights reserved"
+                term={this.term}
+                social={this.social}
+        />
       </div>
     );
   }
