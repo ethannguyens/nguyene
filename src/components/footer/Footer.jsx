@@ -5,6 +5,7 @@ class Footer extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.eventHandler = this.eventHandler.bind(this);
+    console.log(this.props);
   }
 
   componentDidMount() {
@@ -71,7 +72,7 @@ class Footer extends React.Component {
 }
 
 Footer.propTypes = {
-  footer: PropTypes.array,
+  footer: PropTypes.array.isRequired,
   term: PropTypes.array,
   social: PropTypes.array,
   highlight: PropTypes.string,

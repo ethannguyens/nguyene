@@ -67,19 +67,49 @@ const footer = [{
     text: "contact"
   }];
 
-const term = [{
-  term: 'Term of Services,',
-  privacy: 'Privacy Policy',
-  copyright: 'Copyright Policy'
-}];
+const term = [
+  {
+    id: "term",
+    link: "/term",
+    text: "term"
+  },
+  {
+    id: "privacy",
+    link: "/privacy",
+    text: "privacy"
+  },
+  {
+    id: "copyright",
+    link: "/copyright",
+    text: "copyright"
+  }];
 
-const social = [{
-  facebook: 'facebook',
-  twitter: 'twitter',
-  instagram: 'instagram',
-  github: 'github',
-  quora: 'quora'
-}];
+const social = [
+  {
+    id: "facebook",
+    link: "/facebook",
+    text: "facebook"
+  },
+  {
+    id: "twitter",
+    link: "/twitter",
+    text: "twitter"
+  },
+  {
+    id: "instagram",
+    link: "/instagram",
+    text: "instagram"
+  },
+  {
+    id: "github",
+    link: "/github",
+    text: "github"
+  },
+  {
+    id: "quora",
+    link: "/quora",
+    text: "quora"
+  }];
 
 
 module.exports = {
