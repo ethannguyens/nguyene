@@ -20,7 +20,8 @@ class App extends React.Component {
         <Header menu={this.menu}/>
         {this.props.children}
         <Footer footer={this.footer}
-                title="Want to get to know me better, Email me at "
+                title="Want to get to know me better, email me at "
+                subtitle="ethan.nguyens@gmail.com"
                 text="2017 Ethan Nguyen. All rights reserved"
                 term={this.term}
                 social={this.social}

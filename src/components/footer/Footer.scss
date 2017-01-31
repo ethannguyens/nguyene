@@ -1,15 +1,18 @@
 @import '../../styles/modules/variables';
 
+// footer block
 .footer {
   text-align: center;
   padding: 5%;
   background: $brand-black;
 }
 
+// footer-nav-menu
 .footer-nav-menu {
   text-transform: uppercase;
   font-size: $font-xs;
   font-family: $main-sans;
+  margin: 5% 0 0 0;
 }
 
 .footer-nav-menu__item {
@@ -18,4 +21,21 @@
 
 .footer-nav-menu__item-link {
   color: $brand-main;
+}
+
+//footer content
+.footer-content {
+  margin: 5% 0 0 0;
+}
+
+.footer-title {
+  font-family: $main-sans;
+  color: $brand-grey;
+  font-size: $font-s;
+}
+
+.footer-subtitle {
+  font-family: $main-sans;
+  color: $brand-main;
+  font-size: $font-m;
 }
