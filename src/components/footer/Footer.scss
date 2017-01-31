@@ -48,3 +48,23 @@
 .footer-subtitle:hover {
   color: $brand-main;
 }
+
+.footer-text {
+  margin-top: 5%;
+  font-family: $main-sans;
+  font-size: $font-xxs;
+  color: $brand-grey;
+}
+// footer-term
+.footer-nav-term {
+  margin-top: 2%;
+  text-transform: capitalize;
+  font-family: $main-sans;
+  color: $brand-grey;
+}
+
+.footer-nav-term__item-link {
+  color: $brand-grey;
+  font-size: $font-xxs;
+}
+

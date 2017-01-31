@@ -22,7 +22,7 @@ class App extends React.Component {
         <Footer footer={this.footer}
                 title="Get to know me better? email now"
                 subtitle="ethan.nguyens@gmail.com"
-                text="2017 Ethan Nguyen. All rights reserved"
+                text="© 2017 Ethan Nguyen. All rights reserved"
                 term={this.term}
                 social={this.social}
         />
