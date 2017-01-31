@@ -5,6 +5,7 @@
   text-align: center;
   padding: 5%;
   background: $brand-black;
+  -webkit-font-smoothing: antialiased;
 }
 
 // footer-nav-menu
@@ -20,6 +21,10 @@
 }
 
 .footer-nav-menu__item-link {
+  color: $brand-grey-t1;
+}
+
+.footer-nav-menu__item-link:hover {
   color: $brand-main;
 }
 
@@ -35,7 +40,11 @@
 }
 
 .footer-subtitle {
+  color: $brand-grey-t1;
   font-family: $main-sans;
+  font-size: $font-s;
+}
+
+.footer-subtitle:hover {
   color: $brand-main;
-  font-size: $font-m;
 }
