@@ -1,1 +1,21 @@
 @import '../../styles/modules/variables';
+
+.footer {
+  text-align: center;
+  padding: 5%;
+  background: $brand-black;
+}
+
+.footer-nav-menu {
+  text-transform: uppercase;
+  font-size: $font-xs;
+  font-family: $main-sans;
+}
+
+.footer-nav-menu__item {
+  margin: 2% 20%;
+}
+
+.footer-nav-menu__item-link {
+  color: $brand-main;
+}

@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
 
+require('./Footer.scss');
+
 class Footer extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -30,7 +32,7 @@ class Footer extends React.Component {
         <ul className="Grid footer-nav-menu">
           {this.props.footer.map((item, i) => {
             return (
-              <li key={i} className={`footer-nav-menu__item--${item.id}`}>
+              <li key={i} className={`Grid-cell footer-nav-menu__item footer-nav-menu__item--${item.id}`}>
                 <Link key={i} className={`footer-nav-menu__item-link footer-nav-menu__item-link--${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
               </li>
             );
@@ -47,7 +49,7 @@ class Footer extends React.Component {
         <ul className="Grid footer-nav-term-items">
           {this.props.term.map((item, i) => {
             return (
-              <li key={i} className={`footer-nav-term__item footer-nav-term__item--${item.id}`}>
+              <li key={i} className={`Grid-cell footer-nav-term__item footer-nav-term__item--${item.id}`}>
                 <Link key={i} className={`footer-nav-term__item-link footer-nav-term__item-link--${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
               </li>
             );
@@ -59,7 +61,7 @@ class Footer extends React.Component {
         <ul className="Grid footer-nav-items">
           {this.props.social.map((item, i) => {
             return (
-              <li key={i} className={`footer-nav-social__item footer-nav-social__item--${item.id}`}>
+              <li key={i} className={`Grid-cell footer-nav-social__item footer-nav-social__item--${item.id}`}>
                 <Link key={i} className={`footer-nav-social__item-link footer-nav-social__item-link--${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
               </li>
             );
