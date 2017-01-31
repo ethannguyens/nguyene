@@ -64,7 +64,7 @@ class Footer extends React.Component {
           {this.props.social.map((item, i) => {
             return (
               <li key={i} className={`Grid-cell footer-nav-social__item footer-nav-social__item--${item.id}`}>
-                <Link key={i} className={`footer-nav-social__item-link footer-nav-social__item-link--${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+                <a href={item.link} key={i} className={`footer-nav-social__item-link footer-nav-social__item-link--${item.id}`} activeClassName="active">{item.text}</a>
               </li>
             );
           })}

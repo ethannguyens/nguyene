@@ -87,28 +87,28 @@ const term = [
 const social = [
   {
     id: "facebook",
-    link: "/facebook",
+    link: "https://www.facebook.com/ethan.nguyens",
     text: "facebook"
   },
   {
     id: "twitter",
-    link: "/twitter",
+    link: "https://twitter.com/ethannguyens",
     text: "twitter"
   },
   {
     id: "instagram",
-    link: "/instagram",
+    link: "https://www.instagram.com/ethannguyens/",
     text: "instagram"
   },
   {
     id: "github",
-    link: "/github",
+    link: "https://github.com/ethannguyens",
     text: "github"
   },
   {
-    id: "quora",
-    link: "/quora",
-    text: "quora"
+    id: "linkedin",
+    link: "https://www.linkedin.com/in/ethannguyens",
+    text: "linkedin"
   }];
 
 
