@@ -5,7 +5,6 @@ class Footer extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.eventHandler = this.eventHandler.bind(this);
-    console.log(this.props);
   }
 
   componentDidMount() {
@@ -27,41 +26,41 @@ class Footer extends React.Component {
     return (
     <div className="footer">
 
-      <nav className="footer_nav-menu">
-        <ul className="Grid footer_navItems">
+      <nav className="footer-nav">
+        <ul className="Grid footer-nav-menu">
           {this.props.footer.map((item, i) => {
             return (
-              <li key={i} className={`footer_navItem footer_navItem-${item.id}`}>
-                <Link key={i} className={`footer_navItemLink footer_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+              <li key={i} className={`footer-nav-menu__item--${item.id}`}>
+                <Link key={i} className={`footer-nav-menu__item-link footer-nav-menu__item-link--${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
               </li>
             );
           })}
         </ul>
       </nav>
 
-      {this.props.highlight ? <div className="footer_highlight">{this.props.highlight}</div> : undefined}
-      {this.props.title ? <div className="footer_title">{this.props.title}</div> : undefined}
-      {this.props.subtitle ? <div className="footer_subtitle">{this.props.subtitle}</div> : undefined}
-      {this.props.text ? <div className="footer_text">{this.props.text} </div> : undefined}
+      {this.props.highlight ? <div className="footer-highlight">{this.props.highlight}</div> : undefined}
+      {this.props.title ? <div className="footer-title">{this.props.title}</div> : undefined}
+      {this.props.subtitle ? <div className="footer-subtitle">{this.props.subtitle}</div> : undefined}
+      {this.props.text ? <div className="footer-text">{this.props.text} </div> : undefined}
 
-      <nav className="footer_nav-term">
-        <ul className="Grid footer_navItems">
+      <nav className="footer-nav-term">
+        <ul className="Grid footer-nav-term-items">
           {this.props.term.map((item, i) => {
             return (
-              <li key={i} className={`footer_navItem footer_navItem-${item.id}`}>
-                <Link key={i} className={`footer_navItemLink footer_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+              <li key={i} className={`footer-nav-term__item footer-nav-term__item--${item.id}`}>
+                <Link key={i} className={`footer-nav-term__item-link footer-nav-term__item-link--${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
               </li>
             );
           })}
         </ul>
       </nav>
 
-      <nav className="footer_nav-social">
-        <ul className="Grid footer_navItems">
+      <nav className="footer-nav-social">
+        <ul className="Grid footer-nav-items">
           {this.props.social.map((item, i) => {
             return (
-              <li key={i} className={`footer_navItem footer_navItem-${item.id}`}>
-                <Link key={i} className={`footer_navItemLink footer_navItemLink-${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
+              <li key={i} className={`footer-nav-social__item footer-nav-social__item--${item.id}`}>
+                <Link key={i} className={`footer-nav-social__item-link footer-nav-social__item-link--${item.id}`} to={`/${item.link}`} activeClassName="active">{item.text}</Link>
               </li>
             );
           })}
