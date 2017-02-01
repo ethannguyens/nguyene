@@ -16,7 +16,6 @@ class WidgetBackground extends React.Component {
   }
 
   particleNetwork() {
-    console.log('draw canvas');
     require('canvas-particle-network');
 
     const options = {
