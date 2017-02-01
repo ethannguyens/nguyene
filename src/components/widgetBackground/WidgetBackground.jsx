@@ -8,6 +8,26 @@ class WidgetBackground extends React.Component {
     super(props);
     this.mobileDevice = mobileDevice();
     this.background = this.background.bind(this);
+    this.particleNetwork = this.particleNetwork.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.props.canvas) this.particleNetwork();
+  }
+
+  particleNetwork() {
+    console.log('draw canvas');
+    require('canvas-particle-network');
+
+    const options = {
+      particleColor: '#888',
+      background: 'https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg',
+      interactive: true,
+      speed: 'medium',
+      density: 'high'
+    };
+
+    const particleCanvas = new ParticleNetwork(document.querySelector('.particleNetwork'), options);
   }
 
   media(youtubeId, vimeoId, image) {
@@ -56,13 +76,16 @@ class WidgetBackground extends React.Component {
           {this.media(this.props.mediaYoutubeId, this.props.mediaVimeoId, this.props.mediaImage)}
           {this.props.buttonText? <a className="widgetBackgroundContent_button" href={this.props.buttonLink}>{this.props.buttonText}</a> : undefined}
         </div>
+        <div className="particleNetwork" />
       </div>
+
     );
   }
 }
 
 WidgetBackground.propTypes = {
   class: PropTypes.string,
+  canvas: PropTypes.bool,
   image: PropTypes.string,
   youtubeId: PropTypes.string,
   vimeoId: PropTypes.string,

@@ -36,6 +36,12 @@
   flex-flow: column wrap;
 }
 
+//particle
+.particleNetwork {
+  width: 100%;
+  height: 200px;
+}
+
 @media screen and (min-width: 768px) {
   .widgetBackground_background iframe {
     top: -50%;
