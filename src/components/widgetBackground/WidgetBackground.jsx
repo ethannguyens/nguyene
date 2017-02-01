@@ -37,7 +37,7 @@ class WidgetBackground extends React.Component {
         frameBorder="0" allowFullScreen="1"/>);
     } else if (youtubeId) {
       media =  (<iframe
-        src={`https://www.youtube.com/embed/${youtubeId}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=${youtubeId}`}
+        src={`https://www.youtube.com/embed/${youtubeId}?autoplay=0&controls=0&showinfo=0&rel=0&loop=1&playlist=${youtubeId}`}
         frameBorder="0" allowFullScreen="1"/>);
     } else if (image) {
       media = <img src={image}/>;

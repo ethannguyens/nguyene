@@ -40,8 +40,8 @@
 .widgetBackground-passion {
 
   .widgetBackgroundContent_media iframe {
-    width: 100%;
-    height: 230px;
+    min-width: 340px;
+    min-height: 230px;
   }
 
   @extend .widgetBackground-intro;
@@ -56,29 +56,29 @@
   .widgetBackgroundContent_button {
     @extend .button-sub;
   }
+}
 
-  // Breakpoint
-  @media (min-width: $media-md) {
-    .widgetBackground-passion {
-      height: $widget-height-xl;
-      margin-top: 25px;
-      margin-bottom: 25px;
-    }
-    .widgetBackgroundContent_media iframe {
-      width: 560px;
-      height: 315px;
-    }
-  }
-
-  @media (min-width: $media-lg) {
-    .widgetBackground-passion {
-      height: $widget-height-xxl;
-    }
+// Breakpoint
+@media (min-width: $media-md) {
+  .widgetBackground-passion {
+    height: $widget-height-xl;
 
     .widgetBackgroundContent_media iframe {
-      width: 640px;
-      height: 360px;
+      min-width: 560px;
+      min-height: 315px;
     }
   }
 }
+
+@media (min-width: $media-lg) {
+  .widgetBackground-passion {
+    height: $widget-height-xxl;
+
+    .widgetBackgroundContent_media iframe {
+      min-width: 711px;
+      min-height: 400px;
+    }
+  }
+}
+
 
