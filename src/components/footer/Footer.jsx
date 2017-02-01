@@ -41,7 +41,7 @@ class Footer extends React.Component {
       </nav>
 
       <div className="footer-content">
-        {this.props.highlight ? <div className="footer-highlight">{this.props.highlight}</div> : undefined}
+        {this.props.highlight ? <div className="pfooter-highlight">{this.props.highlight}</div> : undefined}
         {this.props.title ? <div className="footer-title">{this.props.title}</div> : undefined}
         {this.props.subtitle ? <div className="footer-subtitle">{this.props.subtitle}</div> : undefined}
         {this.props.text ? <div className="footer-text">{this.props.text} </div> : undefined}
