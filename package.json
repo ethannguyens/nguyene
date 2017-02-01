@@ -18,8 +18,10 @@
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist test lint build:html",
+    "heroku-prebuild": "npm-run-all clean-dist test lint build:html",
     "build": "babel-node tools/build.js",
     "postbuild": "babel-node tools/distServer.js"
+    "heroku-postbuild": "babel-node tools/distServer.js"
   },
   "repository": {
     "type": "git",
