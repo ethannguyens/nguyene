@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as instagramActions from '../../actions/instagramActions';
-import toastr from 'toastr';
 
 export class Instagram extends React.Component {
   constructor(props, context) {
