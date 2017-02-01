@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Rebuilding my website using react redux and webpack",
   "main": "index.js",
+  "engines": {
+    "node": "7.5.0"
+  },
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
     "start": "npm-run-all --parallel test:watch open:src lint:watch",
