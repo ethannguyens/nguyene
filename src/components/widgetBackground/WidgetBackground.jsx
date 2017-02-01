@@ -33,7 +33,7 @@ class WidgetBackground extends React.Component {
     let media;
     if (vimeoId) {
       media = (<iframe
-        src={`https://player.vimeo.com/video/${vimeoId}?api=1&autoplay=1&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
+        src={`https://player.vimeo.com/video/${vimeoId}?api=1&autoplay=0&loop=1&badge=0title=0&byline=0&portrait=0&background=1`}
         frameBorder="0" allowFullScreen="1"/>);
     } else if (youtubeId) {
       media =  (<iframe
