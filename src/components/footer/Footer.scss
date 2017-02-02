@@ -40,7 +40,7 @@
   font-size: $font-s;
 }
 
-.footer-subtitle {
+.footer-subtitle, .footer-link {
   color: $brand-grey-t1;
   font-family: $main-sans;
   font-size: $font-s;
@@ -104,11 +104,11 @@
   .footer-nav-social {
     width: 400px;
   }
-  
+
   .footer-nav-social__item-link {
     font-size: $font-s;
   }
-  
+
   .footer-nav-social__item-link:hover {
     color: $brand-main;
   }

@@ -45,6 +45,7 @@ class Footer extends React.Component {
         {this.props.title ? <div className="footer-title">{this.props.title}</div> : undefined}
         {this.props.subtitle ? <div className="footer-subtitle">{this.props.subtitle}</div> : undefined}
         {this.props.text ? <div className="footer-text">{this.props.text} </div> : undefined}
+        {this.props.link ? <a href={`mailto:${this.props.link}`} className="footer-link">{this.props.link} </a> : undefined}
       </div>
 
       <nav className="footer-nav-term">
@@ -81,7 +82,8 @@ Footer.propTypes = {
   highlight: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  text: PropTypes.string
+  text: PropTypes.string,
+  link: PropTypes.string
 };
 
 export default Footer;
