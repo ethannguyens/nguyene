@@ -1,46 +1,46 @@
 const menu = [
   {
     id: "home",
-      link: "home",
-    text:  "home"
+    link: "home",
+    text: "home"
   },
   {
     id: "portfolio",
-      link: "portfolio",
+    link: "portfolio",
     text: "portfolio"
   },
   {
     id: "education",
-      link: "education",
+    link: "education",
     text: "education"
   },
   {
     id: "about",
-      link: "about",
+    link: "about",
     text: "about"
   },
   {
     id: "blog",
-      link: "blog",
+    link: "blog",
     text: "blog"
   },
   {
     id: "resume",
-      link: "resume",
+    link: "resume",
     text: "resume"
   },
   {
     id: "contact",
-      link: "contact",
+    link: "contact",
     text: "contact"
   }
 ];
 
 const footer = [{
-    id: "portfolio",
-    link: "portfolio",
-    text: "portfolio"
-  },
+  id: "portfolio",
+  link: "portfolio",
+  text: "portfolio"
+},
   {
     id: "education",
     link: "education",
@@ -111,10 +111,18 @@ const social = [
     text: "linkedin"
   }];
 
+const particle = {
+  particleColor: '#fff',
+  interactive: true,
+  speed: 'medium',
+  density: 'medium'
+};
+
 
 module.exports = {
   menu: menu,
   footer: footer,
   term: term,
-  social: social
+  social: social,
+  particle: particle
 };

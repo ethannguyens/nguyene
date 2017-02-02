@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
 import {mobileDevice} from '../../modules/utility';
+import {particle} from '../../database/database';
+
 
 require('./WidgetBackground.scss');
 
@@ -17,16 +19,8 @@ class WidgetBackground extends React.Component {
 
   particleNetwork() {
     require('canvas-particle-network');
-
-    const options = {
-      particleColor: '#888',
-      background: 'https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg',
-      interactive: true,
-      speed: 'medium',
-      density: 'high'
-    };
-
-    const particleCanvas = new ParticleNetwork(document.querySelector('.particleNetwork'), options);
+    this.particle = particle;
+    var particleCanvas = new ParticleNetwork(document.querySelector('.particleNetwork'), this.particle);
   }
 
   media(youtubeId, vimeoId, image) {
@@ -56,6 +50,8 @@ class WidgetBackground extends React.Component {
         background =  (<iframe
           src={`https://www.youtube.com/embed/${youtubeId}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=${youtubeId}`}
           frameBorder="0" allowFullScreen="1"/>);
+      } else {
+        background = <img src={image}/>;
       }
     } else {
       background = <img src={image}/>;
