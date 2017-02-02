@@ -104,7 +104,12 @@
   .footer-nav-social {
     width: 400px;
   }
+  
   .footer-nav-social__item-link {
     font-size: $font-s;
+  }
+  
+  .footer-nav-social__item-link:hover {
+    color: $brand-main;
   }
 }
