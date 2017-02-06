@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import WidgetBackground from '../widgetBackground/WidgetBackground';
+import WidgetImageWithOverlay from '../widgetImageWithOverlay/widgetImageWithOverlay';
 import SetOrion from '../setOrion/SetOrion';
 import Instagram from '../instagram/Instagram';
 
@@ -50,7 +51,13 @@ class HomePage extends React.Component {
                           buttonText="More About Me"
                           buttonLink="#"
         />
-        <Instagram />
+        <WidgetImageWithOverlay class="projects"
+                                img="https://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/584598f9d1758ec839a47e61/1480956179546/Squarespace+Portfolio+DJ+Jason+Klock?format=750w"
+                                highlight="My Website"
+                                title="Ethan Nguyen"
+                                button="View Project"
+                                link="/porfolio"
+        />
       </div>
     );
   }

@@ -1,4 +1,45 @@
 @import '../../styles/modules/variables';
+@import '../../styles/partials/core';
+
+.widgetImageWithOverlay {
+  position: relative;
+  max-width: 100vw;
+
+  @include tint(rgba(0,0,0,0.7));
+}
+
+.widgetImageWithOverlay-image {
+  width: 100%;
+}
+
+.widgetImageWithOverlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.widgetImageWithOverlay-highlight {
+  font-family: $main-serif;
+  color: $brand-main;
+  font-size: $font-xs;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.widgetImageWithOverlay-title {
+  font-family: $main-sans;
+  color: $brand-main;
+  font-size: $font-m;
+  text-transform: uppercase;
+  font-weight: $weight-l;
+  margin-bottom: 30px;
+}
+
+.widgetImageWithOverlay-button {
+  @extend .button-main;
+}
 
 // Screen Adaptive
 @media screen and (min-width: 768px) {
