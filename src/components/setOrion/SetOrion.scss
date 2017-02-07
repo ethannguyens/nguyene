@@ -14,11 +14,37 @@
   margin-bottom: 20px;
 }
 
-.setOrion-widget {
+.Grid.setOrion-widgets {
   margin-bottom: 30px;
 }
+
+.Grid-cell.setOrion-widget {
+  flex: unset;
+}
+
+.Grid-cell.setOrion-widget:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.setOrion-widget {
+  width: 100%;
+}
+
 
 .setOrion-button {
   @extend .button-sub;
   margin-bottom: 20px;
+}
+
+// Screen Adaptive
+@media screen and (min-width: $media-md) {
+  .Grid-cell.setOrion-widget {
+    flex: 1;
+  }
+  .setOrion-widget:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: $media-lg) {
 }

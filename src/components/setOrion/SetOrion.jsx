@@ -19,7 +19,7 @@ class SetOrion extends React.Component {
 
           <div className="Grid setOrion-widgets">
             {this.props.widgets.map((widget, i) => {
-              return (<div className={`setOrion-widget setOrion-widgets__${i}`} key={i}>{widget}</div>);
+              return (<div className={`Grid-cell setOrion-widget setOrion-widgets-${i}`} key={i}>{widget}</div>);
             })}
           </div>
 
