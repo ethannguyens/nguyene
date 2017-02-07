@@ -4,6 +4,7 @@ import Header from './header/Header';
 import Footer from './footer/Footer';
 import {menu, footer, term, social} from '../database/database';
 import {connect} from 'react-redux';
+import {isTouchDevice} from '../modules/utility';
 
 class App extends React.Component {
   constructor() {
@@ -14,9 +15,18 @@ class App extends React.Component {
     this.social = social;
   }
 
+  componentDidMount() {
+    this.touchDevice = isTouchDevice();
+    if (!this.touchDevice) this.addNontouchClass();
+  }
+
+  addNontouchClass() {
+    document.querySelector('.nguyene').classList.add('nontouch');
+  }
+
   render() {
     return (
-      <div className="nguyene">
+      <div className={`nguyene`}>
         <Header menu={this.menu}/>
         {this.props.children}
         <Footer footer={this.footer}

@@ -48,3 +48,25 @@
 
 @media screen and (min-width: 1024px) {
 }
+
+// Non Touch styling
+.nontouch {
+  .widgetImageWithOverlay {
+    &:before {
+      content: none;
+    }
+  }
+
+  .widgetImageWithOverlay-content {
+    display: none;
+  }
+
+  .widgetImageWithOverlay:hover {
+    @include tint(rgba(0,0,0,0.7));
+
+    .widgetImageWithOverlay-content {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
