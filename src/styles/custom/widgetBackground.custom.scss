@@ -36,6 +36,16 @@
   }
 }
 
+//Portfolio
+.widgetBackground-portfolio {
+  @include tint(rgba(0,0,0,0.7));
+  height: $widget-height-s;
+
+  .widgetBackgroundContent_title {
+    text-transform: uppercase;
+  }
+}
+
 //passion
 .widgetBackground-passion {
 

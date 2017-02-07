@@ -1,7 +1,7 @@
 const menu = [
   {
     id: "home",
-    link: "home",
+    link: "",
     text: "home"
   },
   {
