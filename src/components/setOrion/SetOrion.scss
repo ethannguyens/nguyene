@@ -1,0 +1,24 @@
+@import '../../styles/modules/variables';
+@import '../../styles/partials/core';
+
+.setOrion {
+  background: $brand-grey-sub;
+  padding: 30px 5% 50px 5%;
+  text-align: center;
+}
+
+.setOrion-title {
+  font-family: $main-serif;
+  color: $brand-black;
+  font-size: $font-l;
+  margin-bottom: 20px;
+}
+
+.setOrion-widget {
+  margin-bottom: 30px;
+}
+
+.setOrion-button {
+  @extend .button-sub;
+  margin-bottom: 20px;
+}

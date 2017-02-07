@@ -8,27 +8,17 @@ import Instagram from '../instagram/Instagram';
 class HomePage extends React.Component {
   constructor(){
     super();
-    this.widget1 = (<WidgetBackground class="widgetBackground-passion"
-                                      title="Understanding my passion"
-                                      text="There's something to be said about working with passionate business owners that truly love what they do. I’m no different. I started my business because I honestly enjoy coming to work every day to create something beautiful that has the ability to impact others."
-                                      mediaVimeoId="156296154"
-                                      buttonText="More About Me"
-                                      buttonLink="#"
+    this.project1 = <WidgetImageWithOverlay class="projects"
+                                            img="https://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/584598f9d1758ec839a47e61/1480956179546/Squarespace+Portfolio+DJ+Jason+Klock?format=750w"
+                                            highlight="My Website"
+                                            title="Ethan Nguyen"
+                                            button="View Project"
+                                            link="/porfolio"
+    />;
 
-      />
-    );
-    this.widget2 = (<WidgetBackground class="widgetBackground-passion"
-                                      title="Understanding my passion"
-                                      text="There's something to be said about working with passionate business owners that truly love what they do. I’m no different. I started my business because I honestly enjoy coming to work every day to create something beautiful that has the ability to impact others."
-                                      mediaVimeoId="156296154"
-                                      buttonText="More About Me"
-                                      buttonLink="#"
-
-      />
-    );
-    // youtubeId="hE9kpH5aNSo"
-
+    this.projects = [this.project1, this.project1, this.project1];
   }
+
   render() {
     return (
       <div className="homeBody">
@@ -51,12 +41,11 @@ class HomePage extends React.Component {
                           buttonText="More About Me"
                           buttonLink="#"
         />
-        <WidgetImageWithOverlay class="projects"
-                                img="https://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/584598f9d1758ec839a47e61/1480956179546/Squarespace+Portfolio+DJ+Jason+Klock?format=750w"
-                                highlight="My Website"
-                                title="Ethan Nguyen"
-                                button="View Project"
-                                link="/porfolio"
+        <SetOrion class="prjects"
+                  title="My Latest Projects"
+                  widgets={this.projects}
+                  button="view more projects"
+                  link="/porfolio"
         />
       </div>
     );
