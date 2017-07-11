@@ -2,13 +2,8 @@ import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-const GLOBALS = {
-  'process.env.NODE_ENV': JSON.stringify('production')
-};
-
 export default {
   devtool: 'source-map',
-  headers: { "Access-Control-Allow-Origin": "http://localhost:3000", "Access-Control-Allow-Credentials": "true" },
   entry: './src/index',
   target: 'web',
   resolve: {
@@ -20,15 +15,22 @@ export default {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist',
-    headers: { "Access-Control-Allow-Origin": "http://localhost:3000", "Access-Control-Allow-Credentials": "true" }
+    contentBase: './dist'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.DefinePlugin(GLOBALS),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
     new ExtractTextPlugin('styles.css'),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      comment: false,
+      compress: {
+        warnings: false
+      }
+    })
   ],
   module: {
     loaders: [
