@@ -49,7 +49,7 @@ class Portfolio extends React.Component {
                   title="My Latest Projects"
                   widgets={this.projects}
                   button="view more projects"
-                  link="/porfolio"
+                  link="https://github.com/ethannguyens"
         />
       </div>
     );
