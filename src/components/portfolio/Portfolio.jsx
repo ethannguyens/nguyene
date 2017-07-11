@@ -9,14 +9,28 @@ class Portfolio extends React.Component {
   constructor(){
     super();
     this.project1 = <WidgetImageWithOverlay class="projects"
-                                            img="https://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/584598f9d1758ec839a47e61/1480956179546/Squarespace+Portfolio+DJ+Jason+Klock?format=750w"
-                                            highlight="My Website"
-                                            title="Ethan Nguyen"
+                                            img="https://s1.thcdn.com/widgets/83-en/18/muscle_and_strength-114813-104409-104725-124947-042818.jpg"
+                                            highlight="Referrals Scheme"
+                                            title="Myprotein"
                                             button="View Project"
-                                            link="/porfolio"
+                                            link="https://www.myprotein.com/myreferrals.list"
+    />;
+    this.project2 = <WidgetImageWithOverlay class="projects"
+                                            img="http://en.lasestilistas.com/wp-content/uploads/2015/08/Beauty-box-cabecera.jpg"
+                                            highlight="Checkout Handling"
+                                            title="THG"
+                                            button="View Project"
+                                            link="https://www.lookfantastic.com/my.basket"
+    />;
+    this.project3 = <WidgetImageWithOverlay class="projects"
+                                            img="https://www.junsanchez.com.ph/wp-content/themes/junsanchez/images/work/work-whiteskylabs.jpg"
+                                            highlight="End to End User Testing"
+                                            title="Automation"
+                                            button="View Project"
+                                            link="https://github.com/ethannguyens/e2e-automation"
     />;
 
-    this.projects = [this.project1, this.project1, this.project1];
+    this.projects = [this.project1, this.project2, this.project3];
   }
 
   render() {
