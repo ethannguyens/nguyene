@@ -7,14 +7,12 @@ const GLOBALS = {
 };
 
 export default {
-  debug: true,
   devtool: 'source-map',
   headers: { "Access-Control-Allow-Origin": "http://localhost:3000", "Access-Control-Allow-Credentials": "true" },
-  noInfo: false,
   entry: './src/index',
   target: 'web',
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json']
   },
   output: {
     path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
@@ -35,7 +33,7 @@ export default {
   module: {
     loaders: [
       {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]},
-      {test: /\.jsx?$/, include: path.resolve(__dirname, 'src'), loaders: ['babel']},
+      {test: /\.jsx?$/, include: path.resolve(__dirname, 'src'), loaders: ['babel-loader']},
       {test: /\.json$/, loader: "json"},
       {test: /(\.css)$/, loader: ExtractTextPlugin.extract("css?sourceMap")},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},

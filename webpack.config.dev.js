@@ -2,11 +2,9 @@ import webpack from 'webpack';
 import path from 'path';
 
 export default {
-  debug: true,
   devtool: 'cheap-module-eval-source-map',
-  noInfo: false,
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json']
   },
   entry: [
     'eventsource-polyfill', // necessary for hot reloading with IE
@@ -30,7 +28,7 @@ export default {
   module: {
     loaders: [
       {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]},
-      {test: /\.jsx?$/, include: path.resolve(__dirname, 'src'), loaders: ['babel']},
+      {test: /\.jsx?$/, include: path.resolve(__dirname, 'src'), loaders: ['babel-loader']},
       {test: /\.json$/, loader: "json"},
       {test: /(\.css)$/, loaders: ['style', 'css']},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},

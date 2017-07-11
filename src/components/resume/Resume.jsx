@@ -18,7 +18,7 @@ class Resume extends React.Component {
                           highlight="Have a look to what is in me"
                           title="Software Engineer"
                           buttonText="Download Resume"
-                          buttonLink="https://github.com/ethannguyens/nguyene/blob/master/src/Ethan_Nguyen_CV.pdf"
+                          buttonLink="https://github.com/ethannguyens/nguyene/raw/master/src/Ethan_Nguyen_CV.pdf"
         />
       </div>
     );
