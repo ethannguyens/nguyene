@@ -2,7 +2,6 @@ import webpack from 'webpack';
 import path from 'path';
 
 export default {
-  devtool: 'cheap-module-eval-source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json']
   },

@@ -3,7 +3,6 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
-  devtool: 'source-map',
   entry: './src/index',
   target: 'web',
   resolve: {
